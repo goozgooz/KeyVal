@@ -21,6 +21,8 @@ class KeyValue extends React.Component {
         key: props.data.key,
         value: props.data.value,
       };
+    } else {
+      return null;
     }
   }
   

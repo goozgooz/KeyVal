@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './KeyValueContainer.scss';
+import styles from './KeyValueContainer.scss';
 import KeyValueDisplay from '../KeyValueDisplay';
 
 import uuid from 'uuid/v4';
@@ -58,17 +58,25 @@ class KeyValueContainer extends React.Component{
     const {keyValArray} = this.state;
 
     return(
-      <div className='container'>
-        <h1> This is the Containter </h1>
-        <div onClick={this.addInput}> + </div>
-        
-        <KeyValueDisplay 
-          array={keyValArray}
-          updateInput={this.updateInput}
-          removeInput={this.removeInput}
-        />
-        
-        <button onClick={this.handleSubmit}> Submit </button>
+      <div className={styles.container}>
+      
+        <h1> Ashkaan Jaberi's Solution </h1>
+
+        <div className={styles.keyValueContainer}>
+          <div className={styles.addPair}> 
+            <h2> Add Key Value Pair </h2> 
+            <button onClick={this.addInput}> + </button> 
+          </div>
+    
+          <KeyValueDisplay 
+            array={keyValArray}
+            updateInput={this.updateInput}
+            removeInput={this.removeInput}
+          />
+          
+          <button onClick={this.handleSubmit}> Submit </button>
+        </div>
+
       </div>
     );
   }
