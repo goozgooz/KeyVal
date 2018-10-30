@@ -50,7 +50,7 @@ class KeyValue extends React.Component {
           <input
             type='text'
             name='key'
-            placeholder='key'
+            placeholder='Key'
             onChange={this.handleChange}
             value={this.state.key}
           />
@@ -58,7 +58,7 @@ class KeyValue extends React.Component {
           <input
             type='text'
             name='value'
-            placeholder='value'
+            placeholder='Value'
             onChange={this.handleChange}
             value={this.state.value}
           />

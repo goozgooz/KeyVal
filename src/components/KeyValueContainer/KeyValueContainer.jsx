@@ -74,7 +74,7 @@ class KeyValueContainer extends React.Component{
             removeInput={this.removeInput}
           />
           
-          <button onClick={this.handleSubmit}> Submit </button>
+          <button className={styles.submit} onClick={this.handleSubmit}> Submit </button>
         </div>
 
       </div>
