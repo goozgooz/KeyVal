@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './KeyValue.scss';
 
 class KeyValue extends React.Component {
   constructor(props){
@@ -44,7 +45,7 @@ class KeyValue extends React.Component {
 
   render(){
     return(
-      <div>
+      <div className={styles.keyValInput}>
         <form>
           <input
             type='text'
