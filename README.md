@@ -24,3 +24,8 @@ The values of each of these objects are received via the `KeyValue` component, w
 The last component that I created is the `KeyValueDisplay` component, which is a stateless component that is solely responsible for rendering a `KeyValue` component/form for each index item in our parent container's state. 
 
 Finally - the `KeyValueContainer` also has a button which will log each Key/Value pair to the browser's console in JSON format. 
+
+
+
+
+When you run the app and open up the console you will see an error saying that I am using `componentWillReceiveProps` in the KeyValue component - which is not the case if you go look. I've done a search in my codebase for that phrase and nothing showed up. 
