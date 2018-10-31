@@ -51,6 +51,8 @@ class KeyValue extends React.Component {
             type='text'
             name='key'
             placeholder='Key'
+            onFocus={(e) => e.target.placeholder = ''} 
+            onBlur={(e) => e.target.placeholder = 'Key'}
             onChange={this.handleChange}
             value={this.state.key}
           />
@@ -58,7 +60,9 @@ class KeyValue extends React.Component {
           <input
             type='text'
             name='value'
-            placeholder='Value'
+            placeholder='Value'            
+            onFocus={(e) => e.target.placeholder = ''} 
+            onBlur={(e) => e.target.placeholder = 'Value'}
             onChange={this.handleChange}
             value={this.state.value}
           />
