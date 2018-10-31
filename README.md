@@ -27,5 +27,5 @@ Finally - the `KeyValueContainer` also has a button which will log each Key/Valu
 
 
 
-
+#### one last note
 When you run the app and open up the console you will see an error saying that I am using `componentWillReceiveProps` in the KeyValue component - which is not the case if you go look. I've done a search in my codebase for that phrase and nothing showed up. 
