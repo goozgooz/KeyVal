@@ -31,5 +31,9 @@
     font-weight: bold;
     height: 35px;
     width: 35px;
+
+    &:hover {
+      background-color: darken($red, 10%);
+    }
   }
 }
