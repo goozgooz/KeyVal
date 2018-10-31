@@ -72,9 +72,6 @@ class KeyValue extends React.Component {
       </div>
     );
   }
-
-
-
 };
 
 export default KeyValue;

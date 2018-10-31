@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './KeyValueContainer.scss';
 import KeyValueDisplay from '../KeyValueDisplay';
-
 import uuid from 'uuid/v4';
 
 const initialPair = {
@@ -59,7 +58,7 @@ class KeyValueContainer extends React.Component{
 
     return(
       <div className={styles.container}>
-      
+
         <h1> Ashkaan Jaberi's Solution </h1>
 
         <div className={styles.keyValueContainer}>
@@ -76,7 +75,6 @@ class KeyValueContainer extends React.Component{
           
           <button className={styles.submit} onClick={this.handleSubmit}> Submit </button>
         </div>
-
       </div>
     );
   }
