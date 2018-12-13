@@ -1,77 +1,55 @@
-import React from 'react';
 import styles from './KeyValue.scss';
+import React from 'react';
+
+const initialState = {
+  key: '',
+  value: '',
+}
 
 class KeyValue extends React.Component {
   constructor(props){
     super(props);
-    
-    this.state = {
-      id: null,
-      key: '',
-      value: '',
-    };
 
+    this.state = initialState;
     this.handleChange = this.handleChange.bind(this);
-    this.handleRemove = this.handleRemove.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  
-  static getDerivedStateFromProps(props, state){
-    if(props.data !== state){
-      return {
-        id: props.data.id,
-        key: props.data.key,
-        value: props.data.value,
-      };
-    } 
-    
-    return null;
-  }
-  
+
   handleChange(e){
-    const {name, value} = e.target;
-    this.setState({
-      [name]: value,
-    });
-    
-    this.props.updateInput({
-      [name]: value,
-      id: this.state.id,
-    });
+    let {name,value} = e.target;
+    this.setState({[name]:value})
   }
-  
-  handleRemove(){
-    this.props.removeInput(this.state.id);
+
+  handleSubmit(e){
+    e.preventDefault();
+    console.log(this.state)
   }
 
   render(){
     return(
-      <div className={styles.keyValInput}>
+      <React.Fragment>
         <form>
           <input
-            type='text'
-            name='key'
-            placeholder='Key'
-            onFocus={(e) => e.target.placeholder = ''} 
-            onBlur={(e) => e.target.placeholder = 'Key'}
-            onChange={this.handleChange}
-            value={this.state.key}
-          />
-          
+            type = 'text'
+            name = 'key'
+            onChange = {this.handleChange}
+            placeholder = 'key'
+            value = {this.state.key}
+            />
+
           <input
-            type='text'
-            name='value'
-            placeholder='Value'            
-            onFocus={(e) => e.target.placeholder = ''} 
-            onBlur={(e) => e.target.placeholder = 'Value'}
-            onChange={this.handleChange}
-            value={this.state.value}
+            type = 'text'
+            name = 'value'
+            onChange = {this.handleChange}
+            placeholder = 'value'
+            value = {this.state.value}
           />
+
+          <button onClick={this.handleSubmit}> Submit </button>
         </form>
-        
-        <button onClick={this.handleRemove}> X </button>
-      </div>
-    );
+      </React.Fragment>
+    )
   }
-};
+}
 
 export default KeyValue;
